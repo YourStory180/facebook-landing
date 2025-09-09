@@ -491,8 +491,10 @@
     </section>
 
     <script>
-        // Form submission with forced redirect
+        // Form submission with instant redirect and background email
         document.getElementById('checklistForm').addEventListener('submit', function(e) {
+            e.preventDefault(); // Stop form from going to Formspree page
+            
             // Track form submission
             if (typeof fbq !== 'undefined') {
                 fbq('track', 'Lead');
@@ -504,10 +506,15 @@
                 });
             }
             
-            // Force redirect after form submission (regardless of Formspree)
-            setTimeout(function() {
-                window.location.href = 'https://yourstory180.github.io/facebook-landing/thank-you.html';
-            }, 1000);
+            // Submit form data to Formspree in background (for email notification)
+            var formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            });
+            
+            // Immediately redirect to download page
+            window.location.href = 'https://yourstory180.github.io/facebook-landing/thank-you.html';
         });
     </script>
 </body>
