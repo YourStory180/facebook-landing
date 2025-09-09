@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Thank You - Download Your Free Checklist</title>
+    
+    <!-- Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=AW-17491922940"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'AW-17491922940');
+    </script>
+    
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; background: #f7fafc; margin: 0; padding: 40px; text-align: center; }
+        .container { max-width: 600px; margin: 0 auto; background: white; padding: 60px 40px; border-radius: 12px; box-shadow: 0 8px 24px rgba(0,0,0,0.1); }
+        .logo { font-size: 24px; font-weight: 600; color: #2d5016; margin-bottom: 30px; }
+        h1 { color: #1a202c; font-size: 36px; margin-bottom: 20px; }
+        p { color: #4a5568; font-size: 18px; margin-bottom: 30px; line-height: 1.6; }
+        .download-btn { background: #68d391; color: white; padding: 16px 32px; font-size: 18px; font-weight: 600; border: none; border-radius: 8px; text-decoration: none; display: inline-block; margin: 20px 0; transition: all 0.3s ease; }
+        .download-btn:hover { background: #48bb78; transform: translateY(-2px); box-shadow: 0 4px 12px rgba(104, 211, 145, 0.4); }
+        .next-step { background: #f7fafc; padding: 30px; border-radius: 8px; margin-top: 40px; }
+        @media (max-width: 768px) { body { padding: 20px; } .container { padding: 40px 20px; } h1 { font-size: 28px; } }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">Life Story Novel</div>
+        <h1>🎉 Success! Your Checklist is Ready</h1>
+        <p>Thank you for downloading your <strong>FREE Family Story Preservation Checklist</strong>. Click the button below to get your PDF with all 47 powerful questions.</p>
+        
+        <a href="./THE%20FAMILY%20STORY%20PRESERVATION%20CHECKLIST.pdf" class="download-btn" download>📋 Download Your Checklist Now</a>
+        
+        <div class="next-step">
+            <h3 style="color: #2d3748; margin-bottom: 15px;">Ready for the Next Step?</h3>
+            <p style="margin-bottom: 20px;">Once you've captured these precious stories, why not transform them into a beautiful, professionally written novel that your family will treasure forever?</p>
+            <a href="https://lifestorynovel.com" style="color: #68d391; font-weight: 600; text-decoration: none;">Learn More About Life Story Novel →</a>
+        </div>
+        
+        <p style="font-size: 14px; color: #718096; margin-top: 30px;">
+            Need help? Contact us at orders@charliebelle.uk
+        </p>
+    </div>
+
+    <script>
+        // Track PDF download
+        document.querySelector('.download-btn').addEventListener('click', function() {
+            if (typeof gtag !== 'undefined') {
+                gtag('event', 'download', {
+                    'event_category': 'PDF Download',
+                    'event_label': 'Family Story Checklist'
+                });
+            }
+        });
+    </script>
+</body>
+</html>
