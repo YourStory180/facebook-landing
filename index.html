@@ -491,7 +491,7 @@
     </section>
 
     <script>
-        // Form submission tracking
+        // Form submission with forced redirect
         document.getElementById('checklistForm').addEventListener('submit', function(e) {
             // Track form submission
             if (typeof fbq !== 'undefined') {
@@ -503,6 +503,11 @@
                     'event_label': 'Family Story Checklist'
                 });
             }
+            
+            // Force redirect after form submission (regardless of Formspree)
+            setTimeout(function() {
+                window.location.href = 'https://yourstory180.github.io/facebook-landing/thank-you.html';
+            }, 1000);
         });
     </script>
 </body>
